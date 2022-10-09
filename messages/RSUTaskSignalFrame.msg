@@ -1,0 +1,4 @@
+message RSUTaskSignalFrame
+{
+    int TaskSize;
+}
