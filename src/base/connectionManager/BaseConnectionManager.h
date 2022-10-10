@@ -430,4 +430,4 @@ public:
     const cGate* getOutGateTo(const NicEntry* nic, const NicEntry* targetNic) const;
 };
 
-} // namespace veins
+} // namespace test

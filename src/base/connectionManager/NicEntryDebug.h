@@ -147,4 +147,4 @@ public:
     void disconnectFrom(NicEntry* other) override;
 };
 
-} // namespace veins
+} // namespace test

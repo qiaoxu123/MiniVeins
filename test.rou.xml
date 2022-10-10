@@ -1,0 +1,6 @@
+<routes>
+	<vType id="myType" vClass="taxi" accel="0.8" decel="4.5" sigma="0.5" length="5" maxSpeed="50" callFollowMode="IDM"
+		actionStepLength="1" tau="1.4" laneChangeModel="SL2015"/>
+	<vehicle id="00" tpye="myType" depart="2" departLane="1" departPos="0" arrivalLane="0" arrivalPos="max" color="1,0,0"
+		depardSpeed="20"> <route edges="E2  E4"/>  </vehicle>
+</routes>

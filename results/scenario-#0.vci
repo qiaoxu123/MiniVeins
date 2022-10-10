@@ -1,0 +1,63 @@
+file 7136 1665407444                                            
+version 3
+run scenario-0-20221010-21:09:59-58510
+attr configname scenario
+attr datetime 20221010-21:09:59
+attr datetimef 20221010-210959
+attr experiment scenario
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Scenario
+attr processid 58510
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path images
+config network Scenario
+config **.scalar-recording true
+config **.vector-recording true
+config *.playgroundSizeX 2500m
+config *.playgroundSizeY 2500m
+config *.playgroundSizeZ 50m
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 500m
+config *.connectionManager.drawMaxIntfDist false
+config *.manager.updateInterval 1s
+config *.manager.host "\"localhost\""
+config *.manager.port 9999
+config *.manager.autoShutdown true
+config *.manager.launchConfig "xmldoc(\"test.launchd.xml\")"
+config *.node[*].veinsmobility.x 0
+config *.node[*].veinsmobility.y 0
+config *.node[*].veinsmobility.z 0
+config *.node[*].veinsmobility.setHostSpeed false
+config *.node[*0].veinsmobility.accidentCount 1
+config *.node[*0].veinsmobility.accidentStart 73s
+config *.node[*0].veinsmobility.accidentDuration 50s
+
+vector 0 Scenario.node[0].veinsmobility posx ETV
+vector 1 Scenario.node[0].veinsmobility posy ETV
+vector 2 Scenario.node[0].veinsmobility speed ETV
+vector 3 Scenario.node[0].veinsmobility acceleration ETV
+vector 4 Scenario.node[0].veinsmobility co2emission ETV
+0	1517 310 4 17 3 16 14 25 165.49687604186 1120.1119235026 120544.67568451
+1	1827 183 4 17 3 16 14 226.6 226.6 3172.4 718865.84
+2	2010 301 5 17 4 16 13 1.4771120201563 15.075159045185 140.49687604186 1812.7998589472
+3	2311 286 6 17 5 16 12 -0.51437855488621 2.5047667042818 13.083668470143 26.972235375747
+4	2597 267 6 17 5 16 12 0.973 9.141017049761 51.539913783291 297.1405678591
+0	2864 504 18 38 17 37 21 179.89129075462 213.59893474949 4419.445648554 931483.54384201
+1	3368 294 18 38 17 37 21 226.6 229.8 4822.6 1107508.36
+2	3662 345 18 38 17 37 21 0 14.394414712761 48.10205870763 558.82499592431
+3	4007 357 18 38 17 37 21 -4.5 0 -14.560780490299 50.86313923126
+4	4364 324 18 38 17 37 21 0.973 1.5027757208269 21.236915385454 21.763966938913
+4	4688 508 39 63 38 62 25 0.973 11.02456484464 73.091578787355 370.80464694531
+3	5196 504 39 63 38 62 25 -0.81284904372878 2.5276067882543 15.045725545583 33.039066883357
+2	5700 485 39 63 38 62 25 0 15.075902530078 204.79900140248 2768.3248492247
+1	6185 350 39 63 38 62 25 229.8 229.8 5745 1320201
+0	6535 600 39 63 38 62 25 213.59893474949 418.39793615196 6899.2455694551 2023858.0493089
+

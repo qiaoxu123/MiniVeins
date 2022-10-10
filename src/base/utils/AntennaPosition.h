@@ -81,4 +81,4 @@ protected:
     bool undef; /**< true if created using default constructor */
 };
 
-} // namespace veins
+} // namespace test

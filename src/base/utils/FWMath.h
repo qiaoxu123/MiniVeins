@@ -175,7 +175,7 @@ public:
      * otherwise
      *
      * @deprecated
-     * @see veins::math::almost_equal
+     * @see test::math::almost_equal
      */
     static bool close(double one, double two)
     {

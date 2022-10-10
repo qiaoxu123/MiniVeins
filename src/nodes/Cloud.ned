@@ -14,12 +14,19 @@
 //
 package src.nodes;
 
-simple Cloud
+import src.base.communicationUnit.CloudCommunicationUnit;
+
+module Cloud
 {
     parameters:
         int numOfRSUs = default(3);
-        @class(Test::Cloud);
         @display("i=misc/cloud");
     gates:
-        inout lower[];
+        
+    submodules:
+        communicationUnit : CloudCommunicationUnit {
+        
+        }
+    connections:
+        
 }

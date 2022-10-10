@@ -30,7 +30,7 @@ package src.base.modules;
 simple BaseLayer
 {
     parameters:
-        @class(veins::BaseLayer);
+        @class(test::BaseLayer);
         bool notAffectedByHostState = default(false);
         
     gates:

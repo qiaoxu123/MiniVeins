@@ -51,4 +51,4 @@ protected:
     double calcInterfDist() override;
 };
 
-} // namespace veins
+} // namespace test

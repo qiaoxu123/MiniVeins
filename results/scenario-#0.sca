@@ -1,0 +1,117 @@
+version 3
+run scenario-0-20221010-21:09:59-58510
+attr configname scenario
+attr datetime 20221010-21:09:59
+attr datetimef 20221010-210959
+attr experiment scenario
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Scenario
+attr processid 58510
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path images
+config network Scenario
+config **.scalar-recording true
+config **.vector-recording true
+config *.playgroundSizeX 2500m
+config *.playgroundSizeY 2500m
+config *.playgroundSizeZ 50m
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 500m
+config *.connectionManager.drawMaxIntfDist false
+config *.manager.updateInterval 1s
+config *.manager.host "\"localhost\""
+config *.manager.port 9999
+config *.manager.autoShutdown true
+config *.manager.launchConfig "xmldoc(\"test.launchd.xml\")"
+config *.node[*].veinsmobility.x 0
+config *.node[*].veinsmobility.y 0
+config *.node[*].veinsmobility.z 0
+config *.node[*].veinsmobility.setHostSpeed false
+config *.node[*0].veinsmobility.accidentCount 1
+config *.node[*0].veinsmobility.accidentStart 73s
+config *.node[*0].veinsmobility.accidentDuration 50s
+
+par Scenario.node[0].veinsmobility typename "\"src.modules.mobility.traci.TraCIMobility\""
+par Scenario.node[0].veinsmobility notAffectedByHostState true
+par Scenario.node[0].veinsmobility x 0
+par Scenario.node[0].veinsmobility y 0
+par Scenario.node[0].veinsmobility z 0
+par Scenario.node[0].veinsmobility xOrientation 1
+par Scenario.node[0].veinsmobility yOrientation 0
+par Scenario.node[0].veinsmobility zOrientation 0
+par Scenario.node[0].veinsmobility hostPositionOffset 0m
+attr unit m
+par Scenario.node[0].veinsmobility setHostSpeed false
+par Scenario.node[0].veinsmobility accidentCount 1
+par Scenario.node[0].veinsmobility accidentStart 73s
+attr unit s
+par Scenario.node[0].veinsmobility accidentDuration 50s
+attr unit s
+par Scenario.node[0].veinsmobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+scalar Scenario.node[0].veinsmobility startTime 3
+scalar Scenario.node[0].veinsmobility totalTime 59
+scalar Scenario.node[0].veinsmobility stopTime 63
+scalar Scenario.node[0].veinsmobility minSpeed 0
+scalar Scenario.node[0].veinsmobility maxSpeed 15.075902530078
+scalar Scenario.node[0].veinsmobility totalDistance 393.75715971806
+scalar Scenario.node[0].veinsmobility totalCO2Emission 145.8684079561
+par Scenario.node[0] typename "\"src.nodes.Car\""
+par Scenario.node[0] veinsmobilityType "\"src.modules.mobility.traci.TraCIMobility\""
+par Scenario.world typename "\"src.base.modules.BaseWorldUtility\""
+par Scenario.world playgroundSizeX 2500m
+attr unit m
+par Scenario.world playgroundSizeY 2500m
+attr unit m
+par Scenario.world playgroundSizeZ 50m
+attr unit m
+par Scenario.world useTorus false
+par Scenario.world use2D false
+par Scenario.manager typename "\"src.modules.mobility.traci.TraCIScenarioManagerLaunchd\""
+par Scenario.manager connectAt 0s
+attr unit s
+par Scenario.manager firstStepAt -1s
+attr unit s
+par Scenario.manager updateInterval 1s
+attr unit s
+par Scenario.manager moduleType "\"src.nodes.Car\""
+par Scenario.manager moduleName "\"node\""
+par Scenario.manager moduleDisplayString "\"*='i=node/car;is=vs'\""
+par Scenario.manager host "\"localhost\""
+par Scenario.manager port 9999
+par Scenario.manager seed -1
+par Scenario.manager autoShutdown true
+par Scenario.manager margin 25
+par Scenario.manager roiRoads "\"\""
+par Scenario.manager roiRects "\"\""
+par Scenario.manager penetrationRate 1
+par Scenario.manager ignoreGuiCommands false
+par Scenario.manager launchConfig "<launch>...</launch> at /Users/xqiao/Documents/Project/Test3//test.launchd.xml:35"
+scalar Scenario.manager roiArea 0
+par Scenario.roadsCanvasVisualizer typename "\"src.visualizer.roads.RoadsCanvasVisualizer\""
+par Scenario.roadsCanvasVisualizer enabled true
+par Scenario.roadsCanvasVisualizer lineZIndex -1
+par Scenario.roadsCanvasVisualizer lineColor "\"firebrick4\""
+par Scenario.roadsCanvasVisualizer lineWidth 1
+par Scenario.roadsCanvasVisualizer lineWidthZoom false
+par Scenario.rsu typename "\"src.nodes.RSU\""
+par Scenario typename "\"Scenario\""
+par Scenario numOfRSUs 3
+attr prompt "Number of RSUs:"
+par Scenario numOfCars 3
+attr prompt "Number of Cars:"
+par Scenario playgroundSizeX 2500m
+attr unit m
+par Scenario playgroundSizeY 2500m
+attr unit m
+par Scenario playgroundSizeZ 50m
+attr unit m
+

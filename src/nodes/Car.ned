@@ -14,11 +14,18 @@
 //
 package src.nodes;
 
-simple Car
+import src.base.modules.*;
+import src.base.communicationUnit.CarCommunicationUnit;
+
+module Car
 {
     parameters:
-        @class(Test::Car);
-        @display("i=abstract/penguin");
-    gates:
-        inout upper[];
+        @display("i=node/car");
+        string veinsmobilityType = default("src.modules.mobility.traci.TraCIMobility"); //type of the mobility module
+    submodules:        
+        veinsmobility: <veinsmobilityType> like src.base.modules.IMobility {
+            parameters:
+                @display("p=130,172;i=node/car");
+        }
+    connections:
 }

@@ -28,7 +28,7 @@ package src.base.modules;
 moduleinterface IWirelessMac
 {
     parameters:
-        @class(veins::BaseMacLayer);
+        @class(test::BaseMacLayer);
         int headerLength @unit(bit);              // length of the MAC packet header (in bits)
         string address;                           // MAC address as hex string (12 hex digits), or
                                                   // "auto". "auto" values will be replaced by

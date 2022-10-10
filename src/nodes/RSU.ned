@@ -14,12 +14,14 @@
 //
 package src.nodes;
 
-simple RSU
+import src.base.communicationUnit.RSUCommunicationUnit;
+
+module RSU
 {
     parameters:
-        @class(Test::RSU);
-        @display("i=device/server");
+        @display("i=abstract/penguin");
     gates:
-        inout upper;
-        inout lower;
+        
+    submodules:
+    connections:
 }

@@ -33,7 +33,7 @@
 
 #include "src/base/utils/Coord.h"
 #include "src/base/utils/Heading.h"
-#include "src/base/utils/HasLogProxy.h"
+#include "src/modules/utility/HasLogProxy.h"
 
 namespace test {
 

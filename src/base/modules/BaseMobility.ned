@@ -33,7 +33,7 @@ package src.base.modules;
 simple BaseMobility like IMobility
 {
     parameters:
-        @class(veins::BaseMobility);
+        @class(test::BaseMobility);
         bool notAffectedByHostState = default(true);
         double x; // x coordinate of the nodes' position (-1 = random)
         double y; // y coordinate of the nodes' position (-1 = random)
@@ -41,7 +41,7 @@ simple BaseMobility like IMobility
         double xOrientation = default(1);
         double yOrientation = default(0);
         double zOrientation = default(0);
-        @signal[org_car2x_veins_base_modules_mobilityStateChanged](type="veins::BaseMobility");
+        @signal[org_car2x_veins_base_modules_mobilityStateChanged](type="src::BaseMobility");
         @display("i=block/cogwheel");
 }
 

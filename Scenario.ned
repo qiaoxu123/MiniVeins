@@ -10,37 +10,48 @@ import src.nodes.Cloud;
 import src.nodes.RSU;
 import src.nodes.Car;
 import src.nodes.ConnectionManager;
+import src.base.modules.BaseWorldUtility;
+import src.modules.mobility.traci.TraCIScenarioManager*;
+import src.visualizer.roads.RoadsCanvasVisualizer;
 
 network Scenario
 {
     parameters:
         int numOfRSUs @prompt("Number of RSUs:") = default(3);
         int numOfCars @prompt("Number of Cars:") = default(3);
+        double playgroundSizeX @unit(m); // x size of the area the nodes are in (in meters)
+        double playgroundSizeY @unit(m); // y size of the area the nodes are in (in meters)
+        double playgroundSizeZ @unit(m); // z size of the area the nodes are in (in meters)
+
+        @display("bgb=636,453");
         @display("bgb=526,324");
     types:
-        channel Channel extends ned.DelayChannel {
+        channel Channel extends ned.DelayChannel
+        {
             delay = 100ms;
         }
     submodules:
-        cloud: Cloud {
+        world: BaseWorldUtility {
             parameters:
-                @display("p=287,51");
-            gates:
-                lower[parent.numOfRSUs];
+                playgroundSizeX = veins_eval_by_version(veins_omnetpp_buildnum(), "playgroundSizeX", 1525, "parent.playgroundSizeX");
+                playgroundSizeY = veins_eval_by_version(veins_omnetpp_buildnum(), "playgroundSizeY", 1525, "parent.playgroundSizeY");
+                playgroundSizeZ = veins_eval_by_version(veins_omnetpp_buildnum(), "playgroundSizeZ", 1525, "parent.playgroundSizeZ");
+                @display("p=35,38;i=misc/globe");
         }
-        rsu[numOfRSUs]: RSU {
+        manager: TraCIScenarioManagerLaunchd {
             parameters:
-                @display("p=287,146");
+                @display("p=271,38");
         }
-        car: Car {
-            parameters:
-                @display("p=287,247");
-            gates:
-                upper[parent.numOfRSUs];
+        roadsCanvasVisualizer: RoadsCanvasVisualizer {
+            @display("p=145,38");
+        }
+        rsu: RSU {
+            @display("p=369,37;i=sign/yellowdiamond");
+        }
+        node[0]: Car {
+            @display("p=115,295;i=node/car");
         }
     connections:
-        cloud.lower[i] <--> Channel <--> rsu[i].upper for i=0..numOfRSUs-1;
-        rsu[i].lower <--> Channel <--> car.upper[i] for i=0..numOfRSUs-1;
 }
 
 
